@@ -17,7 +17,14 @@ DEFAULT_LIMIT = 600.0
 def probe_duration(path: str) -> float:
     ffprobe = shutil.which("ffprobe")
     if not ffprobe:
-        print("错误：未找到 ffprobe。请安装 ffmpeg（如 winget install Gyan.FFmpeg）后重试。")
+        try:
+            from static_ffmpeg import run as sf
+
+            _, ffprobe = sf.get_or_fetch_platform_executables_else_raise()
+        except Exception:
+            pass
+    if not ffprobe:
+        print("错误：未找到 ffprobe。请 pip install static-ffmpeg 后重试。")
         sys.exit(3)
     out = subprocess.run(
         [ffprobe, "-v", "error", "-select_streams", "v:0",

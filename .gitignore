@@ -30,3 +30,10 @@ yarn-debug.log*
 output/**/*.mp4
 output/*.mp4
 !output/**/.gitkeep
+
+# 项目记忆本地缓存（由 scripts/project-memory.sh refresh 生成，勿手改/勿入库）
+.omx/
+.claude/memory/
+
+# 中间渲染段/动态分镜（可用 tools/build_animatic.py 从关键帧+分段表再生成，不入库）
+episodes/**/seg/*.mp4

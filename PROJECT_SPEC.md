@@ -59,7 +59,8 @@
 | ⑥ 质检 qa.md | checklist 逐项打勾 + 成片路径 | 时长实测 ≤600s、视觉审查通过、命名合规（R2） |
 
 成片交付到 `output/seasonXX/SXXEYY/SXXEYY_final.mp4`（1920×1080、24fps、H.264），
-外挂字幕同名 `SXXEYY.srt`。**视频文件不出现在 `episodes/`，中间帧不出现在 `output/`。**
+外挂字幕同名 `SXXEYY.srt`。**成片不出现在 `episodes/`（中间渲染段 `seg/` 与动态分镜除外，
+它们属于中间产物），中间帧/素材不出现在 `output/`。**
 
 ---
 

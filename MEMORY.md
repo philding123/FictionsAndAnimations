@@ -16,19 +16,23 @@
 - **角色层**：19 个角色定稿（18 普通角色 + white-walker 特效角色），全部过视觉验收。
   改设计 = 改 roster.json → `python tools/gen_character_sheet.py` → 升版本。
 - **第一季**：12 集规划定稿（含评审后的 E10–E12 季终重排：E11 奈德之死、E12 称王+孵龙）。
-- **S01E01《凛冬将至》**：①–④ 全部完成。**7 张关键帧已生成并过视觉验收（7/7）**
-  （`episodes/season01/S01E01/keyframes/`，gpt-image-2 经中转端点；实际尺寸 1536–1774 宽，
-  ⚠️ 低于 1080p 基准，⑤ 渲染前需统一超分）。**当前进行到：⑤ 渲染准备。**
-- **评审**：`docs/review-s01e01-and-season01-plan.md` 的执行清单已全部整改（v0.3）。
+- **S01E01《凛冬将至》**：①–④ 完成，⑤ 首里程碑达成。9 张关键帧验收 9/9，HD 归一化
+  1920×1080（`keyframes/hd/`），**541.00s 动态分镜过时长门禁**（`seg/S01E01_animatic.mp4`，
+  分段表 `seg/segments.json` 是 SSOT，`tools/build_animatic.py` 可复现；mp4 不入库）。
+  **当前卡点：成片级图生视频工具链选型**（render.md 列了三条候选路径，涉及 API 成本，需用户拍板）。
+- **评审**：`docs/review-s01e01-and-season01-plan.md` 的执行清单已全部整改（v0.4）。
 - **图像生成通路**：`OPENAI_API_KEY` 读自 `C:\Users\phil\.codex\auth.json`，
   **必须配 `OPENAI_BASE_URL=https://api.20230112.xyz/v1`**（直连 api.openai.com 会 401）。
+- **ffmpeg**：经 `pip install static-ffmpeg` 就位（winget 会挂起，别用）；
+  check_duration / build_animatic 已自动发现该路径。
 
 ## 下一步（按序）
 
-1. **⑤ 渲染准备**：关键帧超分到 1920×1080 → 图生视频/动态分镜工具链选型 →
-   按 storyboard.md 79 镜推进，逐段时长记录进 render.md。
-2. 质检交付：`check_duration.py` 门禁 → 成片入 `output/season01/S01E01/`。
-3. E02 启动前：定稿批次一角色 8 人（名单在 season01/plan.md 末尾）。
+1. **图生视频工具链选型**（用户决策）：中转端点是否代理视频模型 / 国内视频 API / 本地 ComfyUI，
+   见 render.md 三条候选路径；选型后按 storyboard.md 79 镜把 animatic 升级为成片段。
+2. 音频：对白配音、BGM、音效 → 混入成片（响度 ≈ -16 LUFS）。
+3. 质检交付：`check_duration.py` 门禁 → 成片入 `output/season01/S01E01/`。
+4. E02 启动前：定稿批次一角色 8 人（名单在 season01/plan.md 末尾）。
 
 ## 踩过的坑（别再踩）
 
@@ -47,5 +51,6 @@
 | 设定图预览 PNG | .preview/（缓存，可删，Edge 无头重渲染） |
 | 章节定位 | source/chapters_index.json |
 | 进度唯一事实源 | docs/production-tracker.md |
-| 决策留痕 | docs/decisions.md |
+| 决策留痕 | docs/decisions.md（详版 ADR 在 docs/project-memory/decisions/） |
+| 分层项目记忆（ADR/issue/日志/todo） | docs/project-memory/（入口 INDEX.md；`scripts/project-memory.sh` 维护） |
 | 评审报告 | docs/review-s01e01-and-season01-plan.md（已整改） |

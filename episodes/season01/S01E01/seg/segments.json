@@ -1,0 +1,17 @@
+{
+  "fps": 24,
+  "width": 1920,
+  "height": 1080,
+  "note": "S01E01 动态分镜分段表：每段 = 一张 HD 关键帧 + Ken Burns 运镜，时长=该覆盖镜号的分镜秒数合计（storyboard.md），总计 541s。",
+  "segments": [
+    { "img": "kf-001.png", "seconds": 49, "motion": "push-in",  "covers": "001–010", "scene": "S1 鬼影森林（骑马入林）" },
+    { "img": "kf-011.png", "seconds": 52, "motion": "pan-right", "covers": "011–020", "scene": "S1–S2 异鬼现身与扼杀" },
+    { "img": "kf-024.png", "seconds": 79, "motion": "slow-push", "covers": "021–032", "scene": "S3 刑场宣判与父子上马对话" },
+    { "img": "kf-039.png", "seconds": 56, "motion": "pull-out",  "covers": "033–040A", "scene": "S4 母狼与六只幼崽" },
+    { "img": "kf-043.png", "seconds": 37, "motion": "push-in",   "covers": "041–046", "scene": "S5 潘托斯：韦赛里斯的欺压" },
+    { "img": "kf-048.png", "seconds": 61, "motion": "pan-left",  "covers": "047–054A", "scene": "S6 卡奥寝宫初见" },
+    { "img": "kf-055.png", "seconds": 35, "motion": "push-in",   "covers": "055–059", "scene": "S7 国王驾到" },
+    { "img": "kf-060.png", "seconds": 80, "motion": "slow-push", "covers": "060–065", "scene": "S8 墓窖对话与任命" },
+    { "img": "kf-073.png", "seconds": 92, "motion": "pull-out",  "covers": "066–075", "scene": "S9 塔顶偷听与坠落 + 片尾" }
+  ]
+}

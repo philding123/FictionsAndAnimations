@@ -1,6 +1,8 @@
 # 决策记录（decisions.md）
 
 > 重大制作/规范决策在此留痕：日期 + 决策 + 理由 + 影响范围。
+> 详细 ADR（背景/备选/后果）见 [project-memory/decisions/](project-memory/decisions/)；
+> 本表为速览索引，新增重大决策时两边同步（ADR 用 `scripts/project-memory.sh decision <slug>`）。
 
 | 日期 | 决策 | 理由 | 影响 |
 |------|------|------|------|

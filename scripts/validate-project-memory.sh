@@ -14,7 +14,10 @@ acquire_project_memory_lock() {
 
   mkdir -p "$OMX_DIR"
   exec 9>"$PROJECT_MEMORY_LOCK_FILE"
-  flock 9
+  # Git Bash / Windows lacks flock(1); degrade to unlocked single-writer mode there.
+  if command -v flock >/dev/null 2>&1; then
+    flock 9
+  fi
   export PROJECT_MEMORY_LOCKED=1
 }
 

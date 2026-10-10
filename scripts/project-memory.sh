@@ -26,7 +26,10 @@ acquire_project_memory_lock() {
 
   mkdir -p "$OMX_DIR"
   exec 9>"$PROJECT_MEMORY_LOCK_FILE"
-  flock 9
+  # Git Bash / Windows lacks flock(1); degrade to unlocked single-writer mode there.
+  if command -v flock >/dev/null 2>&1; then
+    flock 9
+  fi
 }
 
 usage() {
@@ -287,6 +290,9 @@ title_for_file() {
   local file="$1"
   local title
 
+  if [ -z "$file" ] || [ ! -f "$file" ]; then
+    return 0
+  fi
   title="$(sed -n '1{s/^# //;p;q;}' "$file")"
   if [ -n "$title" ]; then
     printf '%s' "$title"
@@ -434,14 +440,22 @@ sync_omx_memory_cache() {
 }
 EOF
 
+  local notepad_latest_decision="" notepad_latest_issue=""
+  if [ -n "$latest_decision" ]; then
+    notepad_latest_decision="- Latest decision: [$(title_for_file "$latest_decision")](../$(path_from_repo_root "$latest_decision"))"
+  fi
+  if [ -n "$latest_issue" ]; then
+    notepad_latest_issue="- Latest issue: [$(title_for_file "$latest_issue")](../$(path_from_repo_root "$latest_issue"))"
+  fi
+
   cat >"$OMX_NOTEPAD_FILE" <<EOF
 ## MANUAL
 Generated from \`docs/project-memory/\`.
 Use repository memory as the canonical source of truth.
 
 - Latest daily: [$(title_for_file "$latest_daily")](../$(path_from_repo_root "$latest_daily"))
-- Latest decision: [$(title_for_file "$latest_decision")](../$(path_from_repo_root "$latest_decision"))
-- Latest issue: [$(title_for_file "$latest_issue")](../$(path_from_repo_root "$latest_issue"))
+$notepad_latest_decision
+$notepad_latest_issue
 - Status snapshot: [Project Memory Status](../docs/project-memory/STATUS.md)
 - Todo list: [Project Memory TODO](../docs/project-memory/todo.md)
 
@@ -493,6 +507,14 @@ sync_claude_memory_cache() {
 }
 EOF
 
+  local claude_latest_decision="" claude_latest_issue=""
+  if [ -n "$latest_decision" ]; then
+    claude_latest_decision="- Latest decision: [$(title_for_file "$latest_decision")](../../$(path_from_repo_root "$latest_decision"))"
+  fi
+  if [ -n "$latest_issue" ]; then
+    claude_latest_issue="- Latest issue: [$(title_for_file "$latest_issue")](../../$(path_from_repo_root "$latest_issue"))"
+  fi
+
   cat >"$CLAUDE_MEMORY_INDEX_FILE" <<EOF
 # Project Memory Index (Claude Code cache)
 
@@ -501,8 +523,8 @@ Generated from \`docs/project-memory/\` by \`./scripts/project-memory.sh refresh
 Do not edit by hand. Repository memory is the canonical source of truth.
 
 - Latest daily: [$(title_for_file "$latest_daily")](../../$(path_from_repo_root "$latest_daily"))
-- Latest decision: [$(title_for_file "$latest_decision")](../../$(path_from_repo_root "$latest_decision"))
-- Latest issue: [$(title_for_file "$latest_issue")](../../$(path_from_repo_root "$latest_issue"))
+$claude_latest_decision
+$claude_latest_issue
 - Status snapshot: [Project Memory Status](../../docs/project-memory/STATUS.md)
 - Todo list: [Project Memory TODO](../../docs/project-memory/todo.md)
 - Recording rules: [Project Memory README](../../docs/project-memory/README.md)
@@ -597,6 +619,14 @@ refresh_generated_views() {
   latest_decision="$(latest_file_in_dir "$DECISION_DIR")"
   latest_issue="$(latest_file_in_dir "$ISSUE_DIR")"
 
+  local latest_decision_line="" latest_issue_line=""
+  if [ -n "$latest_decision" ]; then
+    latest_decision_line="- [Latest decision]($(path_to_memory_link "$latest_decision"))"
+  fi
+  if [ -n "$latest_issue" ]; then
+    latest_issue_line="- [Latest issue]($(path_to_memory_link "$latest_issue"))"
+  fi
+
   ensure_parent "$(dirname "$INDEX_OUTPUT_FILE")"
   ensure_parent "$(dirname "$STATUS_OUTPUT_FILE")"
 
@@ -609,15 +639,11 @@ refresh_generated_views() {
 ## Current Entry Points
 
 - [System overview](./README.md)
-- [Architecture overview](./ARCHITECTURE.md)
-- [Architecture slides](./ARCHITECTURE-SLIDES.md)
-- [Architecture for leadership](./ARCHITECTURE-EXECUTIVE.md)
-- [Architecture for engineers](./ARCHITECTURE-TECHNICAL.md)
 - [Current status snapshot](./STATUS.md)
 - [Current todo list](./todo.md)
 - [Latest daily progress]($(path_to_memory_link "$latest_daily"))
-- [Latest decision]($(path_to_memory_link "$latest_decision"))
-- [Latest issue]($(path_to_memory_link "$latest_issue"))
+$latest_decision_line
+$latest_issue_line
 
 ## Recent Daily Notes
 
@@ -646,8 +672,8 @@ EOF
 ## Snapshot
 
 - Latest daily note: [$(title_for_file "$latest_daily")]($(path_to_memory_link "$latest_daily"))
-- Latest decision: [$(title_for_file "$latest_decision")]($(path_to_memory_link "$latest_decision"))
-- Latest issue: [$(title_for_file "$latest_issue")]($(path_to_memory_link "$latest_issue"))
+$latest_decision_line
+$latest_issue_line
 - Current todo list: [Project Memory TODO](./todo.md)
 
 ## Current Focus
