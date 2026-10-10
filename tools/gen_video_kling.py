@@ -6,11 +6,13 @@
         [--duration 5|10] [--mode std|pro] [--model kling-v1-6] [--out out.mp4] [--timeout 900]
 
 凭证（~/.config/Fiction/env，三选一）：
-  1. KLING=<api key>            → Bearer 直连（适用于单 key 平台）
+  1. KLING=<api key>            → Bearer 直连（国内开发者平台「API 密钥」，api-key-kling-... 格式）
   2. KLING_AK=<access key> + KLING_SK=<secret key> → 官方开放平台 JWT(HS256) 签名
-     （可灵控制台 https://app.klingai.com/cn/dev 或 global/dev 获取）
-端点：先试 https://api-singapore.klingai.com（官方全球现行域名），401/404 再回退
-https://api.klingai.com。任务为异步：POST /v1/videos/image2video 创建，轮询 GET 同路径/{id}。
+端点（2026-10-10 实测）：国内开发者平台账号用 https://api-beijing.klingai.com
+（api.klingai.com 与 api-singapore.klingai.com 对国内 key 均 401）。
+当前可用模型：kling-v2-5-turbo、kling-v2-6（v1.x/v2-master 已下线）；
+429 "Account balance not enough" = API 额度/资源包未充值（与 App 会员相互独立）。
+任务为异步：POST /v1/videos/image2video 创建，轮询 GET 同路径/{id}。
 """
 import argparse
 import base64
@@ -23,7 +25,7 @@ import urllib.request
 from pathlib import Path
 
 KEY_PATH = Path.home() / ".config" / "Fiction" / "env"
-BASES = ["https://api-singapore.klingai.com", "https://api.klingai.com"]
+BASES = ["https://api-beijing.klingai.com", "https://api-singapore.klingai.com"]
 
 
 def _b64url(raw: bytes) -> str:
@@ -74,7 +76,7 @@ def main():
     ap.add_argument("--negative", default="")
     ap.add_argument("--duration", default="5", choices=["5", "10"])
     ap.add_argument("--mode", default="std", choices=["std", "pro"])
-    ap.add_argument("--model", default="kling-v1-6")
+    ap.add_argument("--model", default="kling-v2-5-turbo")
     ap.add_argument("--out", required=True)
     ap.add_argument("--timeout", type=int, default=900)
     ap.add_argument("--poll", type=int, default=10)
@@ -93,15 +95,23 @@ def main():
     }
 
     status = resp = None
+    work_base = None
     for base in BASES:
         status, resp = request(base, "POST", "/v1/videos/image2video", key, payload)
         print(f"[{base}] POST -> {status}")
         if status in (200, 201):
             work_base = base
             break
-        print("  ", json.dumps(resp, ensure_ascii=False)[:400])
+        msg = json.dumps(resp, ensure_ascii=False)[:300]
+        print("  ", msg)
+        if status == 429 or "balance" in msg.lower():
+            raise SystemExit(
+                "错误：API 账户余额/资源包不足（与 App 会员相互独立）。\n"
+                "请到可灵开发者平台「API购买入口 / 资源包管理」充值后重试。")
+        if status == 404:
+            continue  # 换端点/模型重试
     else:
-        raise SystemExit("错误：两个端点均创建任务失败")
+        raise SystemExit("错误：所有端点均创建任务失败")
 
     task_id = (resp.get("data") or {}).get("task_id")
     if not task_id:

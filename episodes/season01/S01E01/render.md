@@ -27,16 +27,16 @@ python tools/check_duration.py episodes/season01/S01E01/seg/S01E01_animatic.mp4
 | seg09 | kf-073 | 92 | pull-out | 066–075 | S9 塔顶偷听与坠落+片尾 |
 | | **合计** | **541** | | | 与 storyboard.md 一致 ✅ |
 
-## 后续：图生视频（真正渲染，待工具链选型）
+## 后续：图生视频（真正渲染）
 
-动态分镜验证了时长与节奏；成片级渲染需要图生视频工具链把每镜关键帧变成运动镜头。
-候选路径（**需用户决策，涉及 API 成本**）：
+**工具链已选定：可灵（Kling）API，接入已打通（2026-10-10 实测）**：
 
-1. 当前中转端点（api.20230112.xyz）若代理视频模型（sora-2 / veo 等）→ 沿用现有密钥；
-2. 可灵/即梦等国内视频生成 API（需另开密钥）；
-3. 本地 ComfyUI + 开源图生视频模型（需 GPU 资源）。
-
-每镜成片段落生成后按上表逐段登记实际时长，超支按 storyboard.md 的收缩预案执行。
+- 端点 `https://api-beijing.klingai.com`（国内开发者平台；singapore/global 端点对国内 key 401）
+- 凭证 `~/.config/Fiction/env` 的 KLING key（Bearer），鉴权验证通过
+- 可用模型 `kling-v2-5-turbo`、`kling-v2-6`（旧型号已全部下线）
+- 工具 `tools/gen_video_kling.py`（创建/轮询/下载）
+- ⚠️ **当前 429 余额不足：API 额度与 App 会员独立**，待充值「API 资源包」后先跑
+  pilot（kf-011 异鬼 5s std），按实测单价与耗时外推 79 镜总成本，经确认再批量生成。
 
 ## 合成
 

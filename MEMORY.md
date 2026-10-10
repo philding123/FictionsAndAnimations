@@ -28,13 +28,14 @@
 
 ## 下一步（按序）
 
-1. **图生视频（可灵）——阻塞中**：`~/.config/Fiction/env` 的 KLING key 经实证
-   **在可灵官方两个端点都不是有效凭证**（api-singapore: "api key not found"；
-   api.klingai.com: "Auth failed"；请求头格式已排除问题）。等待用户澄清 key 来源：
-   - 若是中转平台 → 还需要 base_url（工具需加 `KLING_BASE` 支持）；
-   - 若是官方 → 改为 KLING_AK/KLING_SK 双值（JWT 签名模式已在
-     `tools/gen_video_kling.py` 实现，直接可用）。
-   工具就绪：`python tools/gen_video_kling.py --image <hd帧> --prompt <运镜描述> --out seg/x.mp4`
+1. **图生视频（可灵）——配置已打通，只差 API 余额**：
+   - 端点：**`https://api-beijing.klingai.com`**（国内开发者平台；global/singapore 对国内 key 401）
+   - 凭证：`~/.config/Fiction/env` 的 KLING key（Bearer 直连）✓ 鉴权已验证通过
+   - 可用模型：**kling-v2-5-turbo / kling-v2-6**（v1.x、v2-master 已下线；注意是连字符命名）
+   - ⚠️ 当前 429 "Account balance not enough"：**API 额度与 App 会员相互独立**，
+     需到开发者平台「API购买入口 / 资源包管理」充值
+   - 工具：`python tools/gen_video_kling.py --image <hd帧> --prompt <运镜描述> --out seg/x.mp4`
+   - 解锁后流程：pilot（kf-011 异鬼 5s std）→ 按成本/时长外推 79 镜 → 用户确认批量
 2. 音频：对白配音、BGM、音效 → 混入成片（响度 ≈ -16 LUFS）。
 3. 质检交付：`check_duration.py` 门禁 → 成片入 `output/season01/S01E01/`。
 4. E02 启动前：定稿批次一角色 8 人（名单在 season01/plan.md 末尾）。
