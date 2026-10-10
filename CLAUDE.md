@@ -34,6 +34,7 @@ python tools/split_books.py                                  # 重建源文本�
 
 | 路径 | 职责 |
 |------|------|
+| [MEMORY.md](MEMORY.md) | **跨会话状态快照：先读这个**（当前进度/下一步/踩坑） |
 | [source/AGENTS.md](source/AGENTS.md) | 只读源文本（15 册 / 365 章）与章节索引 |
 | [bible/AGENTS.md](bible/AGENTS.md) | 视觉风格圣经（美漫厚涂规范） |
 | [characters/AGENTS.md](characters/AGENTS.md) | 角色一致性体系（roster + 设计图） |

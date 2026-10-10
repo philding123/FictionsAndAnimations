@@ -90,8 +90,8 @@
 <line x1="400" y1="1103" x2="406" y2="1103" stroke="#4A4F55" stroke-width="1.5"/>
 <text x="418" y="1024" font-family='"Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif' font-size="14" fill="#B8BDC2">≈ 165 cm</text>
 <text x="418" y="1048" font-family='"Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif' font-size="14" fill="#B8BDC2">7.3 头身</text>
-<text x="540" y="1012" font-family='"Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif' font-size="14" fill="#C8CCD0">道具 PROPS：银鱼链坠、小指门的信（</text>
-<text x="540" y="1036" font-family='"Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif' font-size="14" fill="#C8CCD0">S01 后期）</text>
+<text x="540" y="1012" font-family='"Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif' font-size="14" fill="#C8CCD0">道具 PROPS：银鱼链坠、莱莎的密信（</text>
+<text x="540" y="1036" font-family='"Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif' font-size="14" fill="#C8CCD0">S01 后期，经小指头之手传递）</text>
 
 <text x="40" y="1178" font-family='"Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif' font-size="11.5" fill="#6E7378">美漫厚涂 · 参考《双城之战》｜视觉标准见 bible/style-guide.md</text>
 <text x="860" y="1178" text-anchor="end" font-family='"Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif' font-size="11.5" fill="#6E7378">生成物勿手改 · 改 roster.json 后重跑 tools/gen_character_sheet.py · roster v1</text>
