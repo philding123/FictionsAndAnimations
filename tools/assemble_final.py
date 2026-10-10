@@ -27,6 +27,7 @@ REAL = {
     "kf-011": EP / "seg/kling_pilot_kf-011.mp4",
     "kf-001": EP / "seg/kling_kf-001.mp4",
     "kf-024": EP / "seg/kling_kf-024.mp4",
+    "kf-048": EP / "seg/kling_kf-048.mp4",
 }
 
 
