@@ -22,8 +22,10 @@
 
 ## 下一步（按序）
 
-1. **生成 S01E01 的 7 张关键帧**（prompt 已备好：`episodes/season01/S01E01/assets.md`
-   + 风格基底词 `bible/style-guide.md` §6）→ 视觉验收 → 更新 assets.md 状态。
+1. **生成 S01E01 的 7 张关键帧**：prompt 批次已就绪
+   （`episodes/season01/S01E01/keyframes/prompts.jsonl`，命令见 assets.md）。
+   ⚠️ **阻塞：环境未设置 `OPENAI_API_KEY`**（内置图像工具不可用，imagegen 技能 CLI 是唯一路径，
+   openai 包已装好）。密钥就绪后跑一条 generate-batch 命令 → 视觉验收 → 更新 assets.md。
 2. 渲染合成（需要图生视频/动态分镜工具链 + ffmpeg），`render.md` 记录逐段时长。
 3. 质检交付：`check_duration.py` 门禁 → 成片入 `output/season01/S01E01/`。
 4. E02 启动前：定稿批次一角色 8 人（名单在 season01/plan.md 末尾）。
