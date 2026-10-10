@@ -1,6 +1,6 @@
 # 角色总索引（由生成器自动维护）
 
-共 14 个角色 ｜ roster.json v1 ｜ 生成器：tools/gen_character_sheet.py
+共 19 个角色 ｜ roster.json v1 ｜ 生成器：tools/gen_character_sheet.py
 
 | id | 中文名 | 定位 | 首秀 | 设计版本 |
 |----|--------|------|------|----------|
@@ -18,3 +18,8 @@
 | `robert-baratheon` | 劳勃·拜拉席恩 | 七国国王（铁王座） | S01E01 | v1 |
 | `khal-drogo` | 卓戈·卡奥 | 多斯拉克大军统帅 | S01E01 | v1 |
 | `joffrey-baratheon` | 乔佛里·拜拉席恩 | 王储 | S01E01 | v1 |
+| `viserys-targaryen` | 韦赛里斯·坦格利安 | 『乞丐王』 · 丹妮莉丝长兄 | S01E01 | v1 |
+| `waymar-royce` | 威玛·罗伊斯 | 守夜人新晋军官（序幕） | S01E01 | v1 |
+| `gared` | 盖瑞 | 守夜人老兵（序幕） | S01E01 | v1 |
+| `will` | 威尔 | 守夜人游骑兵（序幕） · 序幕视点 | S01E01 | v1 |
+| `white-walker` | 异鬼 | 塞外的神秘存在（非人怪物，特效角色） | S01E01 | v1 |
