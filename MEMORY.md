@@ -16,19 +16,19 @@
 - **角色层**：19 个角色定稿（18 普通角色 + white-walker 特效角色），全部过视觉验收。
   改设计 = 改 roster.json → `python tools/gen_character_sheet.py` → 升版本。
 - **第一季**：12 集规划定稿（含评审后的 E10–E12 季终重排：E11 奈德之死、E12 称王+孵龙）。
-- **S01E01《凛冬将至》**：①选材 ✅ ②剧本 ✅ ③分镜 ✅（79 镜/541s）④资产清单 ✅。
-  **当前进行到：④→⑤ 之间——关键帧生成。**
-- **评审**：`docs/review-s01e01-and-season01-plan.md` 的执行清单已全部整改（v0.2）。
+- **S01E01《凛冬将至》**：①–④ 全部完成。**7 张关键帧已生成并过视觉验收（7/7）**
+  （`episodes/season01/S01E01/keyframes/`，gpt-image-2 经中转端点；实际尺寸 1536–1774 宽，
+  ⚠️ 低于 1080p 基准，⑤ 渲染前需统一超分）。**当前进行到：⑤ 渲染准备。**
+- **评审**：`docs/review-s01e01-and-season01-plan.md` 的执行清单已全部整改（v0.3）。
+- **图像生成通路**：`OPENAI_API_KEY` 读自 `C:\Users\phil\.codex\auth.json`，
+  **必须配 `OPENAI_BASE_URL=https://api.20230112.xyz/v1`**（直连 api.openai.com 会 401）。
 
 ## 下一步（按序）
 
-1. **生成 S01E01 的 7 张关键帧**：prompt 批次已就绪
-   （`episodes/season01/S01E01/keyframes/prompts.jsonl`，命令见 assets.md）。
-   ⚠️ **阻塞：环境未设置 `OPENAI_API_KEY`**（内置图像工具不可用，imagegen 技能 CLI 是唯一路径，
-   openai 包已装好）。密钥就绪后跑一条 generate-batch 命令 → 视觉验收 → 更新 assets.md。
-2. 渲染合成（需要图生视频/动态分镜工具链 + ffmpeg），`render.md` 记录逐段时长。
-3. 质检交付：`check_duration.py` 门禁 → 成片入 `output/season01/S01E01/`。
-4. E02 启动前：定稿批次一角色 8 人（名单在 season01/plan.md 末尾）。
+1. **⑤ 渲染准备**：关键帧超分到 1920×1080 → 图生视频/动态分镜工具链选型 →
+   按 storyboard.md 79 镜推进，逐段时长记录进 render.md。
+2. 质检交付：`check_duration.py` 门禁 → 成片入 `output/season01/S01E01/`。
+3. E02 启动前：定稿批次一角色 8 人（名单在 season01/plan.md 末尾）。
 
 ## 踩过的坑（别再踩）
 

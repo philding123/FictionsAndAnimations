@@ -37,23 +37,18 @@
 
 ## 关键帧清单（keyframes/）
 
-> 生成 prompt 已全部定稿于 `keyframes/prompts.jsonl`（7 个任务，2048×1152 / high，
-> 含风格基底词 + 角色 HEX + 负面词）。生成命令（需 `OPENAI_API_KEY`）：
->
-> ```bash
-> python "C:\Users\phil\.zcode\skills\imagegen\scripts\image_gen.py" generate-batch \
->   --input episodes/season01/S01E01/keyframes/prompts.jsonl \
->   --out-dir episodes/season01/S01E01/keyframes --concurrency 5
-> ```
->
-> 当前阻塞：环境未设置 `OPENAI_API_KEY`（内置 image_gen 工具在本环境不可用，CLI 为唯一路径）。
+> 生成 prompt 定稿于 `keyframes/prompts.jsonl`（7 个任务，含风格基底词 + 角色 HEX + 负面词）。
+> **2026-10-10 已全部生成并通过视觉验收（7/7，零重生成）**，走 imagegen CLI（gpt-image-2，
+> 经 OPENAI_BASE_URL 中转端点）。
+> ⚠️ 尺寸偏差：端点返回 1536–1774 宽（低于 style-guide §6 的 ≥1920×1080 基准），
+> 渲染阶段需先统一放大/超分到 1920×1080 再进图生视频；已在 qa.md 留档。
 
-| 文件 | 对应镜号 | 生成 prompt 要点 | 状态 |
-|------|----------|------------------|------|
-| keyframes/kf-001.png | 001 | prompts.jsonl #1：雪压黑森林三骑剪影，月光冷青 #9FC4D0 | prompt 就绪，待密钥 |
-| keyframes/kf-011.png | 011 | #2：异鬼现身（white-walker 全套 HEX+水晶剑蓝光） | prompt 就绪，待密钥 |
-| keyframes/kf-024.png | 024 | #3：奈德擎巨剑宣判（ned HEX + 盖瑞死囚态） | prompt 就绪，待密钥 |
-| keyframes/kf-048.png | 048 | #4：卓戈低角仰拍（drogo HEX，火光底光） | prompt 就绪，待密钥 |
-| keyframes/kf-055.png | 055 | #5：三百人队伍入城（金鹿旗 #C9A227） | prompt 就绪，待密钥 |
-| keyframes/kf-060.png | 060 | #6：墓窖长镜（石像+锈剑+灯火 #C9A227/#37424E） | prompt 就绪，待密钥 |
-| keyframes/kf-073.png | 073 | #7：布兰坠落慢镜（bran HEX，铁灰暮色俯拍） | prompt 就绪，待密钥 |
+| 文件 | 对应镜号 | 实际尺寸 | 状态 |
+|------|----------|----------|------|
+| keyframes/kf-001.png | 001 | 1672×940 | ✅ 验收通过 |
+| keyframes/kf-011.png | 011 | 1536×1024 | ✅ 验收通过 |
+| keyframes/kf-024.png | 024 | 1672×940 | ✅ 验收通过 |
+| keyframes/kf-048.png | 048 | 1536×1024 | ✅ 验收通过 |
+| keyframes/kf-055.png | 055 | 1672×941 | ✅ 验收通过 |
+| keyframes/kf-060.png | 060 | 1774×887 | ✅ 验收通过 |
+| keyframes/kf-073.png | 073 | 1672×941 | ✅ 验收通过 |
