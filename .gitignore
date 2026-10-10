@@ -1,0 +1,32 @@
+# 操作系统与编辑器
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Python 运行缓存与虚拟环境
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+
+# Node / JS 临时文件
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+
+# 日志与临时缓存
+*.log
+*.tmp
+.cache/
+
+# 本地预览缓存（由工具动态生成）
+.preview/
+
+# 成片输出视频（根据规范 ≤600s 视频体积较大，避免直接撑爆 Git 仓库；保留 .srt 字幕与目录结构）
+output/**/*.mp4
+output/*.mp4
+!output/**/.gitkeep

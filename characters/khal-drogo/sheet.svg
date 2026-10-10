@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1200" viewBox="0 0 900 1200">
+<defs>
+  <linearGradient id="torsoShade" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#000000" stop-opacity="0.30"/>
+    <stop offset="0.45" stop-color="#000000" stop-opacity="0.02"/>
+    <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.06"/>
+  </linearGradient>
+  <radialGradient id="vignette" cx="0.5" cy="0.42" r="0.95">
+    <stop offset="0.62" stop-color="#1E2126" stop-opacity="0"/>
+    <stop offset="1" stop-color="#0D0E10" stop-opacity="0.9"/>
+  </radialGradient>
+</defs>
+<rect width="900" height="1200" fill="#181B1F"/>
+<rect width="900" height="1200" fill="url(#vignette)"/>
+
+<rect x="40" y="36" width="7" height="66" fill="#B07D3F"/>
+<text x="62" y="72" font-family='"Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif' font-size="38" font-weight="bold" fill="#EDEAE2">卓戈·卡奥</text>
+<text x="63" y="100" font-family='"Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif' font-size="16" fill="#9BA0A4">Khal Drogo</text>
+<text x="860" y="62" text-anchor="end" font-family='"Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif' font-size="15" fill="#C8CCD0">多斯拉克大军统帅</text>
+<text x="860" y="88" text-anchor="end" font-family='"Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif' font-size="13" fill="#8A8F94">多斯拉克（卡拉萨） · 首秀 S01E01 · 设计 v1</text>
+<line x1="40" y1="122" x2="860" y2="122" stroke="#2E3236" stroke-width="2"/>
+
+<rect x="50" y="146" width="500" height="816" rx="12" fill="#1B1E22" stroke="#2E3236"/>
+<text x="70" y="180" font-family='"Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif' font-size="13" font-weight="bold" fill="#8A8F94" letter-spacing="3">正面设定 FRONT VIEW</text>
+<ellipse cx="290" cy="600" rx="330" ry="420" fill="#B07D3F" opacity="0.10"/>
+<path d="M 290 240 C 190 248 190 370 194 480 C 192 540 200 545 196 500 L 384 500 C 380 545 388 540 386 480 C 390 370 390 248 290 240 Z" fill="#191614"/>
+<rect x="269" y="388" width="42" height="70" rx="12" fill="#9F6F48"/>
+<path d="M 269 418 Q 290 438 311 418 L 311 448 L 269 448 Z" fill="#000000" opacity="0.25"/>
+<path d="M 238 434 C 159 462 159 474 165 540 L 169 929 L 411 929 L 415 540 C 421 474 421 462 342 434 Z" fill="#B57F52"/>
+<path d="M 238 434 C 159 462 159 474 165 540 L 169 929 L 411 929 L 415 540 C 421 474 421 462 342 434 Z" fill="url(#torsoShade)"/>
+<path d="M 290 454 L 290 921" stroke="#000000" stroke-opacity="0.28" stroke-width="3"/>
+<path d="M 250 438 L 290 536 L 330 438" fill="none" stroke="#B07D3F" stroke-width="7" stroke-linejoin="round"/>
+<rect x="163" y="686" width="253" height="26" rx="6" fill="#B07D3F"/>
+<rect x="276" y="684" width="28" height="30" rx="4" fill="#7C1E1E"/>
+<path d="M 242 442 L 216 690 L 188 690 L 214 442 Z" fill="#5C432C"/>
+<circle cx="202" cy="600" r="7" fill="none" stroke="#B07D3F" stroke-width="3.5"/>
+<path d="M 338 442 L 364 690 L 392 690 L 366 442 Z" fill="#5C432C"/>
+<circle cx="378" cy="600" r="7" fill="none" stroke="#B07D3F" stroke-width="3.5"/>
+<ellipse cx="290" cy="935" rx="162" ry="14" fill="#000000" opacity="0.4"/>
+<ellipse cx="220" cy="344" rx="10" ry="17" fill="#A27249"/>
+<ellipse cx="360" cy="344" rx="10" ry="17" fill="#A27249"/>
+<ellipse cx="290" cy="330" rx="70" ry="82" fill="#B57F52"/>
+<ellipse cx="240" cy="364" rx="16" ry="34" fill="#000000" opacity="0.10"/>
+<ellipse cx="340" cy="364" rx="16" ry="34" fill="#000000" opacity="0.10"/>
+<ellipse cx="290" cy="284" rx="42" ry="26" fill="#FFFFFF" opacity="0.07"/>
+<path d="M 255 350 Q 290 442 325 350 Q 311 381 290 382 Q 269 381 255 350 Z" fill="#1B1715"/>
+<path d="M 247 320 Q 263 309 279 320 Q 263 329 247 320 Z" fill="#F2EDE4"/>
+<circle cx="263" cy="319" r="7" fill="#29221E"/>
+<circle cx="263" cy="319" r="3.2" fill="#14100E"/>
+<circle cx="261" cy="316" r="1.7" fill="#FFFFFF" opacity="0.85"/>
+<path d="M 247 320 Q 263 309 279 320" fill="none" stroke="#241E1A" stroke-width="2.4" stroke-opacity="0.75"/>
+<path d="M 246 306 Q 263 296 280 302" fill="none" stroke="#181413" stroke-width="6.5" stroke-linecap="round"/>
+<path d="M 301 320 Q 317 309 333 320 Q 317 329 301 320 Z" fill="#F2EDE4"/>
+<circle cx="317" cy="319" r="7" fill="#29221E"/>
+<circle cx="317" cy="319" r="3.2" fill="#14100E"/>
+<circle cx="315" cy="316" r="1.7" fill="#FFFFFF" opacity="0.85"/>
+<path d="M 301 320 Q 317 309 333 320" fill="none" stroke="#241E1A" stroke-width="2.4" stroke-opacity="0.75"/>
+<path d="M 300 306 Q 317 296 334 302" fill="none" stroke="#181413" stroke-width="6.5" stroke-linecap="round"/>
+<path d="M 290 328 L 285 364 Q 290 372 295 364" fill="none" stroke="#000000" stroke-opacity="0.30" stroke-width="4.5" stroke-linecap="round"/>
+<circle cx="281" cy="368" r="2.6" fill="#000000" opacity="0.30"/>
+<circle cx="299" cy="368" r="2.6" fill="#000000" opacity="0.30"/>
+<path d="M 272 392 Q 290 395 308 392" fill="none" stroke="#7A4A3A" stroke-width="4.4" stroke-linecap="round"/>
+<path d="M 278 402 Q 290 405 302 402" fill="none" stroke="#000000" stroke-opacity="0.22" stroke-width="3"/>
+<path d="M 218 320 Q 220 236 290 240 Q 360 236 362 320 Q 360 292 290 252 Q 220 292 218 320 Z" fill="#1E1A18"/>
+<path d="M 362 324 C 386 370 380 450 390 520" fill="none" stroke="#1E1A18" stroke-width="14" stroke-linecap="round"/>
+<circle cx="378" cy="340" r="5" fill="#B07D3F"/>
+<circle cx="382" cy="374" r="5" fill="#B07D3F"/>
+<circle cx="386" cy="410" r="5" fill="#B07D3F"/>
+
+<rect x="596" y="196" width="46" height="46" rx="7" fill="#B57F52" stroke="#3A3E44"/><text x="656" y="216" font-family='"Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif' font-size="14" fill="#E4E1DA">铜色皮肤</text><text x="656" y="234" font-family='Consolas, "Courier New", monospace' font-size="13" fill="#8A8F94">#B57F52</text><rect x="596" y="258" width="46" height="46" rx="7" fill="#5C432C" stroke="#3A3E44"/><text x="656" y="278" font-family='"Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif' font-size="14" fill="#E4E1DA">皮革护甲</text><text x="656" y="296" font-family='Consolas, "Courier New", monospace' font-size="13" fill="#8A8F94">#5C432C</text><rect x="596" y="320" width="46" height="46" rx="7" fill="#B07D3F" stroke="#3A3E44"/><text x="656" y="340" font-family='"Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif' font-size="14" fill="#E4E1DA">铜环饰件</text><text x="656" y="358" font-family='Consolas, "Courier New", monospace' font-size="13" fill="#8A8F94">#B07D3F</text><rect x="596" y="382" width="46" height="46" rx="7" fill="#7C1E1E" stroke="#3A3E44"/><text x="656" y="402" font-family='"Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif' font-size="14" fill="#E4E1DA">血红腰布</text><text x="656" y="420" font-family='Consolas, "Courier New", monospace' font-size="13" fill="#8A8F94">#7C1E1E</text><rect x="596" y="444" width="46" height="46" rx="7" fill="#1E1A18" stroke="#3A3E44"/><text x="656" y="464" font-family='"Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif' font-size="14" fill="#E4E1DA">黑发</text><text x="656" y="482" font-family='Consolas, "Courier New", monospace' font-size="13" fill="#8A8F94">#1E1A18</text>
+<text x="596" y="542" font-family='"Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif' font-size="13" font-weight="bold" fill="#8A8F94" letter-spacing="3">标志特征 FEATURES</text>
+<text x="596" y="566" font-family='"Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif' font-size="13.5" fill="#C8CCD0">· 两米铜色巨躯+黑长战辫（多斯</text>
+<text x="596" y="587" font-family='"Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif' font-size="13.5" fill="#C8CCD0">拉克视觉锤）</text>
+<text x="596" y="608" font-family='"Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif' font-size="13.5" fill="#C8CCD0">· 不说话时的压迫感靠镜头低角实</text>
+<text x="596" y="629" font-family='"Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif' font-size="13.5" fill="#C8CCD0">现</text>
+<text x="596" y="650" font-family='"Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif' font-size="13.5" fill="#C8CCD0">· 对丹妮的态度转变全靠肢体语言</text>
+<text x="596" y="711" font-family='"Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif' font-size="13" font-weight="bold" fill="#8A8F94" letter-spacing="3">服装 COSTUME</text>
+<text x="596" y="735" font-family='"Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif' font-size="13.5" fill="#C8CCD0">赤裸上身覆皮革胸甲与肩带，臂缠铜</text>
+<text x="596" y="756" font-family='"Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif' font-size="13.5" fill="#C8CCD0">环，血红腰布，战辫垂至腰际缀铜铃</text>
+<text x="596" y="817" font-family='"Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif' font-size="13" font-weight="bold" fill="#8A8F94" letter-spacing="3">气质 DEMEANOR</text>
+<text x="596" y="841" font-family='"Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif' font-size="13.5" fill="#C8CCD0">沉默的行动派；尊重靠赢取</text>
+
+<rect x="50" y="982" width="810" height="166" rx="12" fill="#1B1E22" stroke="#2E3236"/>
+<text x="70" y="1012" font-family='"Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif' font-size="13" font-weight="bold" fill="#8A8F94" letter-spacing="3">剪影与比例 SILHOUETTE</text>
+<circle cx="300" cy="996" r="6" fill="#0A0B0D"/>
+<rect x="294" y="1003" width="12" height="5" fill="#0A0B0D"/>
+<path d="M 281 1007 Q 300 1004 319 1007 L 316 1063 L 284 1063 Z" fill="#0A0B0D"/>
+<rect x="290" y="1061" width="8.5" height="47" fill="#0A0B0D"/>
+<rect x="302" y="1061" width="8.5" height="47" fill="#0A0B0D"/>
+<line x1="400" y1="990" x2="400" y2="1108" stroke="#4A4F55" stroke-width="2"/>
+<line x1="400" y1="990" x2="410" y2="990" stroke="#4A4F55" stroke-width="1.5"/>
+<line x1="400" y1="1005" x2="406" y2="1005" stroke="#4A4F55" stroke-width="1.5"/>
+<line x1="400" y1="1020" x2="410" y2="1020" stroke="#4A4F55" stroke-width="1.5"/>
+<line x1="400" y1="1034" x2="406" y2="1034" stroke="#4A4F55" stroke-width="1.5"/>
+<line x1="400" y1="1049" x2="410" y2="1049" stroke="#4A4F55" stroke-width="1.5"/>
+<line x1="400" y1="1064" x2="406" y2="1064" stroke="#4A4F55" stroke-width="1.5"/>
+<line x1="400" y1="1078" x2="410" y2="1078" stroke="#4A4F55" stroke-width="1.5"/>
+<line x1="400" y1="1093" x2="406" y2="1093" stroke="#4A4F55" stroke-width="1.5"/>
+<line x1="400" y1="1108" x2="410" y2="1108" stroke="#4A4F55" stroke-width="1.5"/>
+<text x="418" y="1024" font-family='"Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif' font-size="14" fill="#B8BDC2">≈ 200 cm</text>
+<text x="418" y="1048" font-family='"Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif' font-size="14" fill="#B8BDC2">8.0 头身</text>
+<text x="540" y="1012" font-family='"Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif' font-size="14" fill="#C8CCD0">道具 PROPS：亚拉克弯刀、大辫铜铃</text>
+
+<text x="40" y="1178" font-family='"Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif' font-size="11.5" fill="#6E7378">美漫厚涂 · 参考《双城之战》｜视觉标准见 bible/style-guide.md</text>
+<text x="860" y="1178" text-anchor="end" font-family='"Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif' font-size="11.5" fill="#6E7378">生成物勿手改 · 改 roster.json 后重跑 tools/gen_character_sheet.py · roster v1</text>
+</svg>

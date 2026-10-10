@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1200" viewBox="0 0 900 1200">
+<defs>
+  <linearGradient id="torsoShade" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#000000" stop-opacity="0.30"/>
+    <stop offset="0.45" stop-color="#000000" stop-opacity="0.02"/>
+    <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.06"/>
+  </linearGradient>
+  <radialGradient id="vignette" cx="0.5" cy="0.42" r="0.95">
+    <stop offset="0.62" stop-color="#1E2126" stop-opacity="0"/>
+    <stop offset="1" stop-color="#0D0E10" stop-opacity="0.9"/>
+  </radialGradient>
+</defs>
+<rect width="900" height="1200" fill="#181B1F"/>
+<rect width="900" height="1200" fill="url(#vignette)"/>
+
+<rect x="40" y="36" width="7" height="66" fill="#37424E"/>
+<text x="62" y="72" font-family='"Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif' font-size="38" font-weight="bold" fill="#EDEAE2">珊莎·史塔克</text>
+<text x="63" y="100" font-family='"Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif' font-size="16" fill="#9BA0A4">Sansa Stark</text>
+<text x="860" y="62" text-anchor="end" font-family='"Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif' font-size="15" fill="#C8CCD0">临冬城长女</text>
+<text x="860" y="88" text-anchor="end" font-family='"Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif' font-size="13" fill="#8A8F94">史塔克家族 · 首秀 S01E01 · 设计 v1</text>
+<line x1="40" y1="122" x2="860" y2="122" stroke="#2E3236" stroke-width="2"/>
+
+<rect x="50" y="146" width="500" height="816" rx="12" fill="#1B1E22" stroke="#2E3236"/>
+<text x="70" y="180" font-family='"Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif' font-size="13" font-weight="bold" fill="#8A8F94" letter-spacing="3">正面设定 FRONT VIEW</text>
+<ellipse cx="290" cy="600" rx="330" ry="420" fill="#37424E" opacity="0.10"/>
+<path d="M 290 240 C 190 248 190 370 194 480 C 192 540 200 545 196 500 L 384 500 C 380 545 388 540 386 480 C 390 370 390 248 290 240 Z" fill="#7F4527"/>
+<rect x="269" y="388" width="42" height="70" rx="12" fill="#CEB093"/>
+<path d="M 269 418 Q 290 438 311 418 L 311 448 L 269 448 Z" fill="#000000" opacity="0.25"/>
+<path d="M 238 434 C 212 462 212 474 218 540 L 231 929 L 349 929 L 362 540 C 368 474 368 462 342 434 Z" fill="#9FB4D8"/>
+<path d="M 238 434 C 212 462 212 474 218 540 L 231 929 L 349 929 L 362 540 C 368 474 368 462 342 434 Z" fill="url(#torsoShade)"/>
+<path d="M 290 454 L 290 921" stroke="#000000" stroke-opacity="0.28" stroke-width="3"/>
+<path d="M 250 438 L 290 536 L 330 438" fill="none" stroke="#37424E" stroke-width="7" stroke-linejoin="round"/>
+<path d="M 231 640 C 178 780 168 880 178 931 L 402 931 C 412 880 402 780 349 640 Z" fill="#9FB4D8"/><path d="M 231 640 C 178 780 168 880 178 931 L 209 931 C 212 840 218 760 247 648 Z" fill="#000000" opacity="0.20"/>
+<rect x="227" y="630" width="127" height="20" rx="8" fill="#5A4A38"/>
+<ellipse cx="290" cy="935" rx="97" ry="14" fill="#000000" opacity="0.4"/>
+<ellipse cx="220" cy="344" rx="10" ry="17" fill="#D3B497"/>
+<ellipse cx="360" cy="344" rx="10" ry="17" fill="#D3B497"/>
+<ellipse cx="290" cy="330" rx="70" ry="82" fill="#EBC9A8"/>
+<ellipse cx="240" cy="364" rx="16" ry="34" fill="#000000" opacity="0.10"/>
+<ellipse cx="340" cy="364" rx="16" ry="34" fill="#000000" opacity="0.10"/>
+<ellipse cx="290" cy="284" rx="42" ry="26" fill="#FFFFFF" opacity="0.07"/>
+<path d="M 247 320 Q 263 309 279 320 Q 263 329 247 320 Z" fill="#F2EDE4"/>
+<circle cx="263" cy="319" r="7" fill="#476287"/>
+<circle cx="263" cy="319" r="3.2" fill="#14100E"/>
+<circle cx="261" cy="316" r="1.7" fill="#FFFFFF" opacity="0.85"/>
+<path d="M 247 320 Q 263 309 279 320" fill="none" stroke="#241E1A" stroke-width="2.4" stroke-opacity="0.75"/>
+<path d="M 246 306 Q 263 296 280 302" fill="none" stroke="#784125" stroke-width="6.5" stroke-linecap="round"/>
+<path d="M 301 320 Q 317 309 333 320 Q 317 329 301 320 Z" fill="#F2EDE4"/>
+<circle cx="317" cy="319" r="7" fill="#476287"/>
+<circle cx="317" cy="319" r="3.2" fill="#14100E"/>
+<circle cx="315" cy="316" r="1.7" fill="#FFFFFF" opacity="0.85"/>
+<path d="M 301 320 Q 317 309 333 320" fill="none" stroke="#241E1A" stroke-width="2.4" stroke-opacity="0.75"/>
+<path d="M 300 306 Q 317 296 334 302" fill="none" stroke="#784125" stroke-width="6.5" stroke-linecap="round"/>
+<path d="M 290 328 L 285 364 Q 290 372 295 364" fill="none" stroke="#000000" stroke-opacity="0.30" stroke-width="3.4" stroke-linecap="round"/>
+<circle cx="281" cy="368" r="2.6" fill="#000000" opacity="0.30"/>
+<circle cx="299" cy="368" r="2.6" fill="#000000" opacity="0.30"/>
+<path d="M 272 392 Q 290 395 308 392" fill="none" stroke="#7A4A3A" stroke-width="4.4" stroke-linecap="round"/>
+<path d="M 278 402 Q 290 405 302 402" fill="none" stroke="#000000" stroke-opacity="0.22" stroke-width="3"/>
+<path d="M 218 318 Q 218 234 290 238 Q 362 234 362 318 Q 362 290 290 254 Q 218 290 218 318 Z" fill="#96522F"/>
+<path d="M 220 322 Q 212 356 228 370 L 234 330 Z" fill="#87492A"/>
+<path d="M 360 322 Q 368 356 352 370 L 346 330 Z" fill="#96522F"/>
+
+<rect x="596" y="196" width="46" height="46" rx="7" fill="#9FB4D8" stroke="#3A3E44"/><text x="656" y="216" font-family='"Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif' font-size="14" fill="#E4E1DA">主裙装</text><text x="656" y="234" font-family='Consolas, "Courier New", monospace' font-size="13" fill="#8A8F94">#9FB4D8</text><rect x="596" y="258" width="46" height="46" rx="7" fill="#C9B47A" stroke="#3A3E44"/><text x="656" y="278" font-family='"Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif' font-size="14" fill="#E4E1DA">刺绣饰边</text><text x="656" y="296" font-family='Consolas, "Courier New", monospace' font-size="13" fill="#8A8F94">#C9B47A</text><rect x="596" y="320" width="46" height="46" rx="7" fill="#E5E9EE" stroke="#3A3E44"/><text x="656" y="340" font-family='"Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif' font-size="14" fill="#E4E1DA">外衫</text><text x="656" y="358" font-family='Consolas, "Courier New", monospace' font-size="13" fill="#8A8F94">#E5E9EE</text><rect x="596" y="382" width="46" height="46" rx="7" fill="#5A4A38" stroke="#3A3E44"/><text x="656" y="402" font-family='"Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif' font-size="14" fill="#E4E1DA">皮革腰带</text><text x="656" y="420" font-family='Consolas, "Courier New", monospace' font-size="13" fill="#8A8F94">#5A4A38</text><rect x="596" y="444" width="46" height="46" rx="7" fill="#EBC9A8" stroke="#3A3E44"/><text x="656" y="464" font-family='"Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif' font-size="14" fill="#E4E1DA">肤色</text><text x="656" y="482" font-family='Consolas, "Courier New", monospace' font-size="13" fill="#8A8F94">#EBC9A8</text>
+<text x="596" y="542" font-family='"Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif' font-size="13" font-weight="bold" fill="#8A8F94" letter-spacing="3">标志特征 FEATURES</text>
+<text x="596" y="566" font-family='"Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif' font-size="13.5" fill="#C8CCD0">· 赤褐长直发，淑女仪态</text>
+<text x="596" y="587" font-family='"Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif' font-size="13.5" fill="#C8CCD0">· 针线活与歌谣构成的幻想滤镜</text>
+<text x="596" y="608" font-family='"Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif' font-size="13.5" fill="#C8CCD0">· 笑容渐被礼节性微笑取代</text>
+<text x="596" y="669" font-family='"Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif' font-size="13" font-weight="bold" fill="#8A8F94" letter-spacing="3">服装 COSTUME</text>
+<text x="596" y="693" font-family='"Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif' font-size="13.5" fill="#C8CCD0">淡蓝绣银线少女长裙，发间细带，后</text>
+<text x="596" y="714" font-family='"Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif' font-size="13.5" fill="#C8CCD0">期改穿兰尼斯特赠礼色（红金）以示</text>
+<text x="596" y="735" font-family='"Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif' font-size="13.5" fill="#C8CCD0">剧情信号</text>
+<text x="596" y="796" font-family='"Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif' font-size="13" font-weight="bold" fill="#8A8F94" letter-spacing="3">气质 DEMEANOR</text>
+<text x="596" y="820" font-family='"Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif' font-size="13.5" fill="#C8CCD0">憧憬骑士与王子的乖巧长女，是真话</text>
+<text x="596" y="841" font-family='"Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif' font-size="13.5" fill="#C8CCD0">被现实逐集没收的角色</text>
+
+<rect x="50" y="982" width="810" height="166" rx="12" fill="#1B1E22" stroke="#2E3236"/>
+<text x="70" y="1012" font-family='"Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif' font-size="13" font-weight="bold" fill="#8A8F94" letter-spacing="3">剪影与比例 SILHOUETTE</text>
+<circle cx="300" cy="998" r="8" fill="#0A0B0D"/>
+<rect x="294" y="1006" width="12" height="6" fill="#0A0B0D"/>
+<path d="M 281 1012 L 287 1051 L 263 1108 L 337 1108 L 313 1051 L 319 1012 Z" fill="#0A0B0D"/>
+<line x1="400" y1="990" x2="400" y2="1108" stroke="#4A4F55" stroke-width="2"/>
+<line x1="400" y1="990" x2="410" y2="990" stroke="#4A4F55" stroke-width="1.5"/>
+<line x1="400" y1="1008" x2="406" y2="1008" stroke="#4A4F55" stroke-width="1.5"/>
+<line x1="400" y1="1027" x2="410" y2="1027" stroke="#4A4F55" stroke-width="1.5"/>
+<line x1="400" y1="1045" x2="406" y2="1045" stroke="#4A4F55" stroke-width="1.5"/>
+<line x1="400" y1="1064" x2="410" y2="1064" stroke="#4A4F55" stroke-width="1.5"/>
+<line x1="400" y1="1082" x2="406" y2="1082" stroke="#4A4F55" stroke-width="1.5"/>
+<line x1="400" y1="1101" x2="410" y2="1101" stroke="#4A4F55" stroke-width="1.5"/>
+<text x="418" y="1024" font-family='"Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif' font-size="14" fill="#B8BDC2">≈ 158 cm</text>
+<text x="418" y="1048" font-family='"Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif' font-size="14" fill="#B8BDC2">6.4 头身</text>
+<text x="418" y="1072" font-family='"Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif' font-size="12" fill="#8A8F94">未成年人比例</text>
+<text x="540" y="1012" font-family='"Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif' font-size="14" fill="#C8CCD0">道具 PROPS：刺绣手帕、『淑女』（冰</text>
+<text x="540" y="1036" font-family='"Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif' font-size="14" fill="#C8CCD0">原狼幼崽）</text>
+
+<text x="40" y="1178" font-family='"Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif' font-size="11.5" fill="#6E7378">美漫厚涂 · 参考《双城之战》｜视觉标准见 bible/style-guide.md</text>
+<text x="860" y="1178" text-anchor="end" font-family='"Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif' font-size="11.5" fill="#6E7378">生成物勿手改 · 改 roster.json 后重跑 tools/gen_character_sheet.py · roster v1</text>
+</svg>
