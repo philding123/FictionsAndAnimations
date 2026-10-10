@@ -28,8 +28,13 @@
 
 ## 下一步（按序）
 
-1. **图生视频工具链选型**（用户决策）：中转端点是否代理视频模型 / 国内视频 API / 本地 ComfyUI，
-   见 render.md 三条候选路径；选型后按 storyboard.md 79 镜把 animatic 升级为成片段。
+1. **图生视频（可灵）——阻塞中**：`~/.config/Fiction/env` 的 KLING key 经实证
+   **在可灵官方两个端点都不是有效凭证**（api-singapore: "api key not found"；
+   api.klingai.com: "Auth failed"；请求头格式已排除问题）。等待用户澄清 key 来源：
+   - 若是中转平台 → 还需要 base_url（工具需加 `KLING_BASE` 支持）；
+   - 若是官方 → 改为 KLING_AK/KLING_SK 双值（JWT 签名模式已在
+     `tools/gen_video_kling.py` 实现，直接可用）。
+   工具就绪：`python tools/gen_video_kling.py --image <hd帧> --prompt <运镜描述> --out seg/x.mp4`
 2. 音频：对白配音、BGM、音效 → 混入成片（响度 ≈ -16 LUFS）。
 3. 质检交付：`check_duration.py` 门禁 → 成片入 `output/season01/S01E01/`。
 4. E02 启动前：定稿批次一角色 8 人（名单在 season01/plan.md 末尾）。
